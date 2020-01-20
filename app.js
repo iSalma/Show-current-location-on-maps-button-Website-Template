@@ -24,6 +24,8 @@ function getLocation() {
 // }
 
 
+
+
 function returnLocation() {
         navigator.geolocation.getCurrentPosition(position => {
             var lat, lng, mapLink, timeZone;
@@ -39,3 +41,6 @@ function returnLocation() {
             document.getElementById("text4").value = "Time Zone: " + timeZone;
         });
 }
+
+/**longitude/15 is the time zone  bs lw neg msh 3yza floor 3yza ceil*/
+//alert(Math.floor(30.564654/15))
