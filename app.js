@@ -5,16 +5,18 @@ function setLocation(lat, lng)
 }
 
 function getLocation() {
-     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position => {
-            open("https://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude);
-        });
-    }
-    else {
-       var n = document.getElementById("notValid");
-        n.innerHTML = "not valid on this browser";
-    }
     // navigator.geolocation.getCurrentPosition(googleMap);
+    setTimeout(function () {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                open("https://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude);
+            });
+        }
+        else {
+            var n = document.getElementById("notValid");
+            n.innerHTML = "not valid";
+        }
+    }, 1000);
 }
 
 // function googleMap(position) {
