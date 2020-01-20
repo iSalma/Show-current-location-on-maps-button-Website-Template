@@ -5,9 +5,15 @@ function setLocation(lat, lng)
 }
 
 function getLocation() {
-   navigator.geolocation.getCurrentPosition(position => {
-    open("https://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude);
-   });
+     if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            open("https://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude);
+        });
+    }
+    else {
+       var n = document.getElementById("notValid");
+        n.innerHTML = "not valid";
+    }
     // navigator.geolocation.getCurrentPosition(googleMap);
 }
 
