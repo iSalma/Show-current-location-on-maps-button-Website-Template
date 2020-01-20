@@ -12,7 +12,7 @@ function getLocation() {
     }
     else {
        var n = document.getElementById("notValid");
-        n.innerHTML = "not valid";
+        n.innerHTML = "not valid on this browser";
     }
     // navigator.geolocation.getCurrentPosition(googleMap);
 }
