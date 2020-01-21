@@ -15,11 +15,30 @@
 
     
     
-    <input id="text1" type="text" value="">
-    <input id="text2" type="text" value="">
-    <input id="text3"  type="text" value="">
-    <input id="text4" type="text" value="">
-    <button onclick="returnLocation()">return</button>
+    <label>Latitude:</label>
+    <input id="lat" type="text">
+    <br>
+    <br>
+
+    <label>Longitude:</label>
+    <input id="lng" type="text">
+    <br>
+    <br>
+
+    <label>Google Maps Link:</label>
+    <input id="mapLink" type="text">
+    <br>
+    <br>
+
+    <label>Time Zone:</label>
+    <input id="timeZone" type="text">
+    <br>
+    <br>
+
+    <!-- زر ارجاع البياتات و تعبئة الحقول -->
+    <button onclick="getLocationData()">Get my location data</button>
+
+    <p> NOTE: You have to enable "Location Access" on your device first.</p>
     
     <script src="app.js"></script>
 
