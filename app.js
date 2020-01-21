@@ -26,20 +26,20 @@ function getLocation() {
 
 
 
-function returnLocation() {
-        navigator.geolocation.getCurrentPosition(position => {
-            var lat, lng, mapLink, timeZone;
+function getLocationData() {
+    navigator.geolocation.getCurrentPosition(position => {
+        var lat, lng, mapLink, timeZone;
 
-            lat = position.coords.latitude;
-            lng = position.coords.longitude;
-            mapLink = "https://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude;
-            timeZone = new Date().getTimezoneOffset() / -60;
+        lat = position.coords.latitude;
+        lng = position.coords.longitude;
+        mapLink = "https://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude;
+        timeZone = new Date().getTimezoneOffset() / -60;
 
-            document.getElementById("text1").value = "Latitude: " + lat;
-            document.getElementById("text2").value = "Longitude: " + lng;
-            document.getElementById("text3").value = "Link: " + mapLink;
-            document.getElementById("text4").value = "Time Zone: " + timeZone;
-        });
+        document.getElementById("lat").value = lat;
+        document.getElementById("lng").value = lng;
+        document.getElementById("mapLink").value = mapLink;
+        document.getElementById("timeZone").value = timeZone;
+    });
 }
 
 /**longitude/15 is the time zone  bs lw neg msh 3yza floor 3yza ceil*/
