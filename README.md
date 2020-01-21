@@ -4,7 +4,7 @@
 - button3: return current latitude, current longitude, link to google maps with current location and timezone;
 
 # Visit
-Click ![here](https://isalma.github.io/Show-current-location-on-maps-button-Website-Template/) to go to the website.
+Click [here](https://isalma.github.io/Show-current-location-on-maps-button-Website-Template/) to go to the website.
 
 # Using 
 - HTML5
